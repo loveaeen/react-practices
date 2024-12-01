@@ -10,19 +10,25 @@ function Header({title}){
 
 function Logo(){
     return (
-        <h1>Logo</h1>
+        <h1 className="text-3xl font-bold underline">
+            Logo
+        </h1>
     )
 } 
 
 function Title(props){
     return (
-        <h1>{props.title ? createTitle(props.title) : 'Default Title'}</h1>
+        <h2 class="text-base/7 font-semibold text-gray-900">
+            {props.title ? createTitle(props.title) : 'Default Title'}
+        </h2>
     )
 } 
 
 function Nav(){
     return (
-        <h1>Nav</h1>
+        <p class="mt-1 text-sm/6 text-gray-600">
+            Nav
+        </p>
     )
 } 
 

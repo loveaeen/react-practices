@@ -1,0 +1,36 @@
+<html>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <body>
+        <div id="app"></div>
+    </body>
+    <script type="text/jsx">
+        const app = document.getElementById("app");
+
+        function App(){
+            const [likeCount, setLikeCount] = React.useState(0);
+
+            function handleClick(){
+                setLikeCount(likeCount+1);
+            }
+
+            return (
+                <div>
+                    <Button count={likeCount} onClick={handleClick}/>
+                    <Button count={likeCount} onClick={handleClick}/>
+                </div>
+            )
+        }
+
+
+        function Button({count, onClick}){
+            return <button onClick={onClick}>Clicked {count} times</button>;
+        }
+
+
+        const root = ReactDOM.createRoot(app);
+        root.render(<App/>);
+    </script>
+</html>

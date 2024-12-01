@@ -4,22 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Babel Script -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
     <!-- Add your component files first -->
     <script type="text/jsx" src="Header/Header.js"></script>
     <script type="text/jsx">
         const app = document.getElementById("app");
 
         function HomePage(){
+            const names = [
+                { title: 'Cabbage', id: 1 },
+                { title: 'Garlic', id: 2 },
+                { title: 'Apple', id: 3 },
+            ];
             return (
                 <div>
                     <Header title="My Website"/>
-                    <Header title="React"/>
-                    <Header/>
+                    <ul className="mt-2">
+                        {names.map((name) => (
+                            <li key={name.id} className="text-sm/6 text-black-600">{name.title}</li>
+                        ))}
+                    </ul>
+                    <Button/>
+                    <Button/>
+                </div>
+            )
+        }
+
+        function Button(){
+            const [likeCount, setLikeCount] = React.useState(0);
+            return (
+                <div className="mt-2 flex items-center gap-x-3 ">
+                    <button type="button" onClick={() => (setLikeCount(likeCount+1))} className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                        Clicked {likeCount} times
+                    </button>
                 </div>
             )
         }
