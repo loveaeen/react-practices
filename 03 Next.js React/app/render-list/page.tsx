@@ -21,7 +21,7 @@ export default function App(){
 
     return (
         <article>
-            <h1 className="text-3xl font-bold underline">Scientists</h1>
+            <h1 className="text-sm font-bold underline">Scientists</h1>
             <ul>{listItems}</ul>
         </article>
     )
