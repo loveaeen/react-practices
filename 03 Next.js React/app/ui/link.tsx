@@ -7,9 +7,15 @@ const links = [
 
 export default function NavLinks(){
     return (
-        <nav>
+        <nav className="flex flex-col space-y-3">
             {links.map((link) => (
-                <Link key={link.href} href={link.href} className="text-blue-500 hover:text-blue-600 mr-4">{link.label}</Link>
+                <Link 
+                    key={link.href} 
+                    href={link.href} 
+                    className="text-blue-500 hover:text-blue-600"
+                >
+                    {link.label}
+                </Link>
             ))}
         </nav>
     )

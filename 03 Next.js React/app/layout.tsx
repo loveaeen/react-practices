@@ -13,8 +13,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-gray-100'>
-        <NavLinks />
-        <div>{children}</div>
+        <div className='flex'>
+          <nav className='w-48 p-4'>
+            <NavLinks />
+          </nav>
+          <main className='flex-1 p-4'>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )
