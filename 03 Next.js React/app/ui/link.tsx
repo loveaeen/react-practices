@@ -7,7 +7,7 @@ const links = [
 
 export default function NavLinks(){
     return (
-        <nav className="flex flex-col space-y-3">
+        <nav className="flex flex-col space-y-3 w-48 p-4">
             {links.map((link) => (
                 <Link 
                     key={link.href} 

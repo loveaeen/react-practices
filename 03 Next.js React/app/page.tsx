@@ -18,7 +18,7 @@ export default function HomePage() {
       <ul>
         {
           products.map((product) => (
-              <li className='text-blue-500 hover:text-blue-600 my-2' key={product.id}>{product.name}</li>
+              <li className='text-blue-500 hover:text-blue-600 my-3' key={product.id}>{product.name}</li>
           ))
         }
       </ul>

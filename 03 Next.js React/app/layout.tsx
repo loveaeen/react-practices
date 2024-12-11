@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='bg-gray-100'>
         <div className='flex'>
-          <nav className='w-48 p-4'>
-            <NavLinks />
-          </nav>
+          <NavLinks />
           <main className='flex-1 p-4'>
             {children}
           </main>
