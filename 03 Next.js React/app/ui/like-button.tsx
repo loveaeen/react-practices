@@ -10,5 +10,5 @@ export default function LikeButton(){
         setLikes(likes + 1);
     }
 
-    return <button onClick={handleClick}>Like ({likes})</button>;
+    return <button className="bg-blue-500 text-white p-2 rounded-md" onClick={handleClick}>Like ({likes})</button>;
 }

@@ -1,5 +1,10 @@
 import {people} from '@/app/lib/data';
 import {getImageUrl} from '@/app/lib/utils';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Descrbing the UI'
+}
 
 export default function App(){
 
@@ -16,7 +21,7 @@ export default function App(){
 
     return (
         <article>
-            <h1>Scientists</h1>
+            <h1 className="text-3xl font-bold underline">Scientists</h1>
             <ul>{listItems}</ul>
         </article>
     )

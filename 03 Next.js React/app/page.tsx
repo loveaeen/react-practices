@@ -2,7 +2,7 @@ import React from 'react';
 import LikeButton from './ui/like-button';
 
 function Header({title}){
-  return <h1>{title ? title : 'Default Title'}</h1>
+  return <h1 className='text-sm font-bold underline text-center'>{title ? title : 'Default Title'}</h1>
 }
 
 export default function HomePage() {
@@ -13,17 +13,17 @@ export default function HomePage() {
   ];
   
   return (
-    <div>
+    <>
       <Header title="Develop. Preview. Ship." />
-      <ul>
+      <ul className='flex flex-col items-center justify-center'>
         {
           products.map((product) => (
-              <li key={product.id}>{product.name}</li>
+              <li className='text-blue-500 hover:text-blue-600 my-2' key={product.id}>{product.name}</li>
           ))
         }
       </ul>
   
       <LikeButton />
-    </div>
+    </>
   );
 }
