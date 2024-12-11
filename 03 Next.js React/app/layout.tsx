@@ -13,8 +13,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-gray-100'>
+        <nav className="bg-white shadow-lg">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex justify-between h-16">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <span className="text-xl font-bold text-gray-800">Loveaeen</span>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="hidden md:block">
+                  <div className="ml-10 flex items-center space-x-4">
+                    <div className="relative group">
+                      <NavLinks />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
         <div className='flex'>
-          <NavLinks />
           <main className='flex-1 p-4'>
             {children}
           </main>
