@@ -109,10 +109,10 @@ export default function Example() {
                         </PopoverPanel>
                     </Popover>
 
-                    <Link href="/render-list" className="text-sm/6 font-semibold text-gray-900">
-                        renderList
+                    <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+                        Features
                     </Link>
-                    <Link href="/render-list" className="text-sm/6 font-semibold text-gray-900">
+                    <Link href="#" className="text-sm/6 font-semibold text-gray-900">
                         Marketplace
                     </Link>
                     <Link href="#" className="text-sm/6 font-semibold text-gray-900">
