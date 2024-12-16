@@ -1,5 +1,10 @@
+import { Metadata } from "next";
 import { getImageUrl } from "../lib/utils";
 import { AvatarProps } from "../types/person";
+
+export const metadata: Metadata = {
+    title : 'Avatar'
+}
 
 function Card({ children } : {children : React.ReactNode}) {
     return (

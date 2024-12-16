@@ -13,15 +13,15 @@ export default function HomePage() {
         { id: 3, name: 'Margaret Hamilton' }
     ];
 
+    const listItems = products.map(product => 
+        <li className='text-blue-500 hover:text-blue-600 my-3' key={product.id}>{product.name}</li>
+    )
+
     return (
         <>
             <Header title={title} />
             <ul>
-                {
-                    products.map((product) => (
-                        <li className='text-blue-500 hover:text-blue-600 my-3' key={product.id}>{product.name}</li>
-                    ))
-                }
+                {listItems}
             </ul>
 
             <LikeButton />
