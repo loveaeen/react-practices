@@ -1,11 +1,12 @@
 import React from 'react';
 import LikeButton from './ui/like-button';
 
-function Header({ title }) {
+function Header({ title }: { title: string }) {
     return <h1 className='text-sm font-bold underline'>{title ? title : 'Default Title'}</h1>
 }
 
 export default function HomePage() {
+    const title = 'Develop. Preview. Ship.'
     const products = [
         { id: 1, name: 'Ada Lovelace' },
         { id: 2, name: 'Grace Hopper' },
@@ -14,7 +15,7 @@ export default function HomePage() {
 
     return (
         <>
-            <Header title="Develop. Preview. Ship." />
+            <Header title={title} />
             <ul>
                 {
                     products.map((product) => (
