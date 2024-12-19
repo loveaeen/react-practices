@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './ui/header';
+import Header from '@/app/ui/header';
 
 // These styles apply to every route in the application
 import './globals.css'

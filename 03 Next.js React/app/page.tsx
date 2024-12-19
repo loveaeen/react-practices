@@ -1,5 +1,5 @@
 import React from 'react';
-import LikeButton from './ui/like-button';
+import LikeButton from '@/app/ui/like-button';
 
 function Header({ title }: { title: string }) {
     return <h1 className='text-sm font-bold underline'>{title ? title : 'Default Title'}</h1>
