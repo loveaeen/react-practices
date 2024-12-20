@@ -24,7 +24,9 @@ export default function HomePage() {
                 {listItems}
             </ul>
 
-            <LikeButton />
+            <LikeButton>
+                This is a like button
+            </LikeButton>
         </>
     );
 }
