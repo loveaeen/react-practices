@@ -3,7 +3,6 @@
 import { useState } from 'react';
 
 export default function LikeButton({ children }: { children: React.ReactNode }) {
-
     const [likes, setLikes] = useState(0);
 
     function handleClick() {
